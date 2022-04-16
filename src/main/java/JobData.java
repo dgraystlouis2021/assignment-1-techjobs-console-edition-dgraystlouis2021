@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by LaunchCode
@@ -94,12 +95,28 @@ public class JobData {
      * @return      List of all jobs with at least one field containing the value
      */
     public static ArrayList<HashMap<String, String>> findByValue(String value) {
-
         // load data, if not already loaded
         loadData();
-
-        // TODO - implement this method
-        return null;
+        // TODO - implement this method-------------------------------------------------------------------
+        ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+        for (HashMap<String, String> row : allJobs) {
+            //if(row.containsValue(value)) {
+                while(true){
+                    for (Map.Entry<String,String> e : row.entrySet()) {
+                        //System.out.println(e.getKey() + " (" + e.getValue() + ")");
+                        String eString=e.getValue();
+                        //if(eString.equals("Javascript")||eString.equals("JavaScript")) {
+                        //    System.out.println(eString);
+                        //}
+                        if (value.equalsIgnoreCase(eString)) {
+                                jobs.add(row);
+                        }
+                    }
+                    break;
+                }
+                //System.out.println("findByValue " + row);
+        }
+        return jobs;
     }
 
     /**
@@ -142,5 +159,4 @@ public class JobData {
             e.printStackTrace();
         }
     }
-
 }
