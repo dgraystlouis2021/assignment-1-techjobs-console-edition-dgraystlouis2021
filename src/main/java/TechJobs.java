@@ -131,7 +131,7 @@ public class TechJobs {
                 Set<String> keys = al.keySet();
                 for (String s : keys) {
                     //System.out.println("string "+s);
-                    System.out.println(s + ": " + al.get(s));
+                    System.out.println(s + ": " + al.get(s).trim());
                 }
                 System.out.println("*****");
             }
