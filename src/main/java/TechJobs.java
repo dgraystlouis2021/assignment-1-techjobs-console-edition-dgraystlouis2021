@@ -56,7 +56,7 @@ public class TechJobs {
                 String searchField = getUserSelection("Search by:", columnChoices);
 
                 // What is their search term?
-                System.out.println("\nSearch term:");
+                System.out.print("\nSearch term:");
                 String searchTerm = in.nextLine();
 
                 if (searchField.equals("all")) {
@@ -121,8 +121,9 @@ public class TechJobs {
         //System.out.println("printJobs is not implemented yet");
         if(!someJobs.isEmpty()) {
             ArrayList<String> stringList = new ArrayList<>();
-            System.out.println("*****");
+            //System.out.println("*****");
             for (HashMap<String, String> al : someJobs) {
+                System.out.println("\n*****");
                 //System.out.println(al);
                 //System.out.println(al.get("position type"));
                 //System.out.println("position type: "+al.get("position type"));
