@@ -80,7 +80,13 @@ public class JobData {
 
             String aValue = row.get(column);
 
-            if (aValue.contains(value)) {
+//            if (aValue.contains(value)) {
+//                jobs.add(row);
+//            }
+//            if (aValue.equalsIgnoreCase(value)) {
+//                jobs.add(row);
+//            }
+            if(aValue.toLowerCase().contains(value.toLowerCase())){
                 jobs.add(row);
             }
         }
@@ -108,9 +114,12 @@ public class JobData {
                         //if(eString.equals("Javascript")||eString.equals("JavaScript")) {
                         //    System.out.println(eString);
                         //}
-                        if (value.equalsIgnoreCase(eString)) {
-                                jobs.add(row);
+                        if(eString.toLowerCase().contains(value.toLowerCase())){
+                            jobs.add(row);
                         }
+//                        if (value.equalsIgnoreCase(eString)) {
+//                                jobs.add(row);
+//                        }
                     }
                     break;
                 }

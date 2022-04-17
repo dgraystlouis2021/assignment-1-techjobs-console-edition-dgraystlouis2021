@@ -7,6 +7,7 @@ public class TechJobs {
 
     static Scanner in = new Scanner(System.in);
 
+
     public static void main (String[] args) {
 
         // Initialize our field map with key/name pairs
@@ -134,7 +135,7 @@ public class TechJobs {
                 System.out.println("*****");
             }
         }else{
-            System.out.println("There are no jobs in the list");
+            System.out.println("No Results");
         }
     }
 }
